@@ -37,7 +37,7 @@ ou
 
 # Banco de Dados
 
-Execute o comando para crair as tabelas e popular o banco de dados:
+Execute o comando para criar as tabelas e popular o banco de dados:
 
 ``` $ php artisan migrate --seed ```
 
