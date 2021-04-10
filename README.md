@@ -13,9 +13,19 @@
 
 ## Com Docker:
 
-``` $ docker-compose up -d --build ```
+``` $ docker run --rm \-u "$(id -u):$(id -g)" \-v $(pwd):/opt \-w /opt \laravelsail/php80-composer:latest \composer install --ignore-platform-reqs ```
+
+``` $ docker-compose up -d ```
 
 Após instalar as imagens e containers, instale as dependências do projeto
+
+### NPM
+
+``` $ npm install ```
+
+ou
+
+``` $ yarn install ```
 
 ### Composer
 
@@ -27,13 +37,15 @@ E então:
 
 ``` # composer install ```
 
-### NPM
+Aproveite e defina as permissões de pastas
 
-``` $ npm install ```
+``` # chmod -R 777 ./ ```
 
-ou
+# Arquivo .env
 
-``` $ yarn install ```
+Simplesmente crie uma cópia do arquivo .env.example como .env
+
+``` $ cp .env.example .env  ```
 
 # Banco de Dados
 
