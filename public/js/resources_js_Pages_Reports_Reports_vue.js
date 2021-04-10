@@ -65,6 +65,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -21262,7 +21268,16 @@ var render = function() {
               return _c(
                 "li",
                 { key: product.id, staticClass: "list-group-item" },
-                [_vm._v(_vm._s(product.name))]
+                [
+                  _c("span", { staticClass: "badge badge-success" }, [
+                    _vm._v(_vm._s(product.addedVia))
+                  ]),
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(product.name) +
+                      "\n                    "
+                  )
+                ]
               )
             }),
             0
@@ -21281,7 +21296,16 @@ var render = function() {
               return _c(
                 "li",
                 { key: product.id, staticClass: "list-group-item" },
-                [_vm._v(_vm._s(product.name))]
+                [
+                  _c("span", { staticClass: "badge badge-danger" }, [
+                    _vm._v(_vm._s(product.removedVia))
+                  ]),
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(product.name) +
+                      "\n                    "
+                  )
+                ]
               )
             }),
             0

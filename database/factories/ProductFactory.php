@@ -22,11 +22,14 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+        $env = ['api', 'web'];
+        $randomIndex = array_rand($env);
+
         return [
             'name'      => $this->faker->word(),
             'sku'       => Str::random(10),
             'quantity'  => random_int(1, 500),
-            'addedVia'  => 'web'
+            'addedVia'  => $env[$randomIndex]
         ];
     }
 }

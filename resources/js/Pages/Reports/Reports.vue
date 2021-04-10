@@ -22,7 +22,10 @@
                 </div>
                 <div class="row">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" v-for="product of added" :key="product.id">{{ product.name }}</li>
+                        <li class="list-group-item" v-for="product of added" :key="product.id">
+                            <span class="badge badge-success">{{ product.addedVia }}</span>
+                            {{ product.name }}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +35,10 @@
                 </div>
                 <div class="row">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" v-for="product of deleted" :key="product.id">{{ product.name }}</li>
+                        <li class="list-group-item" v-for="product of deleted" :key="product.id">
+                            <span class="badge badge-danger">{{ product.removedVia }}</span>
+                            {{ product.name }}
+                        </li>
                     </ul>
                 </div>
             </div>
